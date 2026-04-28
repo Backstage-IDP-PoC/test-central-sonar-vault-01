@@ -1,18 +1,20 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
+
 metadata:
   name: test-central-sonar-vault-01
-  description: Python app that displays time - named test-central-sonar-vault-01
+  description: Service test-central-sonar-vault-01
+
   annotations:
     github.com/project-slug: Backstage-IDP-PoC/test-central-sonar-vault-01
     backstage.io/techdocs-ref: dir:.
-    jenkins.io/job-full-name:  Backstage_PoC/test-central-sonar-vault-01/main
+    jenkins.io/job-full-name: Backstage_PoC/test-central-sonar-vault-01/main
     argocd/app-name: test-central-sonar-vault-01
-    argocd/instance-name: main
+    backstage.io/kubernetes-id: test-central-sonar-vault-01
+    backstage.io/kubernetes-namespace: default
     sonarqube.org/project-key: test-central-sonar-vault-01
- 
+    
 spec:
   type: service
   owner: development
-
   lifecycle: experimental
